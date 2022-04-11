@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bejelentkezés</title>
+</head>
+<body>
+
+<fieldset style="width: 10%;">
+  <legend>Bejelentkezés</legend>
+  <input type="text" name="felhasználónév" id="username" placeholder="Add meg a neved!" required>
+ <br>
+ <input type="password" name="jelszó" id="psw" placeholder="Add meg a jelszód!" required>
+ <br>
+ <button onclick="belep(usr.value,jelszo.value)" >Belépés</button>
+</fieldset>
+
+<p id="fel">Itt jelenjen meg a felhasználónév</p>
+<p id="jel">Itt jelenjen meg a felhasználónév</p>
+
+<script>
+  var usr = ""
+  var jelszo = ""
+  function belep(username , jelszo) {
+    document.getElementById("fel").innerHTML = usr
+    document.getElementById("jel").innerHTML = jelszo
+    if (username == "") document.getElementById("fel").innerHTML = "Nem adtál meg felhasználónevet!"
+    if (jelszo == "")document.getElementById("jel").innerHTML = "Nem adtál meg Jelszót"
+    if (jelszo == "fortniteszar") {
+      document.getElementById("siker").innerHTML = "Bejutottál a rendszerbe"
+      window.open("https://pornhub.com")
+    }
+    else{
+      document.getElementById('siker').style.color = "red"
+      document.getElementById('siker').innerHTML = "HIBA"
+    }
+  }
+</script>
+
+</body>
+</html>
